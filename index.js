@@ -498,16 +498,66 @@ const fullPokemonList = {
     }
 }
 
+// Held Items
+const heldItemList = [
+    'Aeos Cookie',
+    'Assault Vest',
+    'Attack Weight',
+    'Buddy Barrier',
+    'Charging Charm',
+    'Choice Specs',
+    'Curse Bangle',
+    'Curse Incense',
+    'Drain Crown',
+    'Energy Amplifier',
+    'Exp. Share',
+    'Float Stone',
+    'Focus Band',
+    'Leftovers',
+    'Muscle Band',
+    'Rapid-Fire Scarf',
+    'Razor Claw',
+    'Rescue Hood',
+    'Resonant Guard',
+    'Rocky Helmet',
+    // 'Rusted Sword',
+    'Scope Lens',
+    'Score Shield',
+    'Shell Bell',
+    'Slick Spoon',
+    'Sp. Atk Specs',
+    'Weakness Policy',
+    'Wise Glasses'
+]
+
+const battleItemList = [
+    'Eject Button',
+    'Fluffy Tail',
+    'Full Heal',
+    'Goal Getter',
+    'Potion',
+    'Slow Smoke',
+    'X Attack',
+    'X Speed',
+    'Shedinja Doll'
+]
+
 let pokemonList = {...fullPokemonList}
 
 const generate = () => {
     let pokemon = Object.keys(pokemonList)[Math.floor(Math.random()*Object.keys(pokemonList).length)]
     let move1 = pokemonList[pokemon]['move1'][Math.floor(Math.random()*pokemonList[pokemon]['move1'].length)]
     let move2 = pokemonList[pokemon]['move2'][Math.floor(Math.random()*pokemonList[pokemon]['move2'].length)]
+    let [item1, item2, item3] = [...heldItemList].sort(() => 0.5 - Math.random()).slice(0, 3)
+    let battleItem = battleItemList[Math.floor(Math.random()*battleItemList.length)]
     
     document.getElementById('pokemon-name').innerText = pokemon
     document.getElementById('move1').innerText = move1
     document.getElementById('move2').innerText = move2
+    document.getElementById('held-item1').innerText = item1
+    document.getElementById('held-item2').innerText = item2
+    document.getElementById('held-item3').innerText = item3
+    document.getElementById('battle-item').innerText = battleItem
 }
 
 document.getElementById('roll').addEventListener('click', generate)
