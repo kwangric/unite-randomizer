@@ -1,17 +1,35 @@
 <html>
     <head>
         <title>Pokémon Unite Roulette</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
         <h1>Pokémon Unite Roulette</h1>
-        <h2 id="pokemon-name"></h2>
-        <h3 id="move1"></h3>
-        <h3 id="move2"></h3>
-        <h2 id="held-item1"></h2>
-        <h2 id="held-item2"></h2>
-        <h2 id="held-item3"></h2>
-        <h2 id="battle-item"></h2>
+        <div id="pokemon-card">
+            <div id="pokemon-card-image"></div>
+            <div id="pokemon-card-label">
+                <h2 id="pokemon-name"></h2>
+            </div>
+        </div>
+        
+        
+        <div class="moves">
+            <h4>Move 1</h4>
+            <h3 id="move1"></h3>
+            <h4>Move 2</h4>
+            <h3 id="move2"></h3>
+        </div>
+        <div class="items">
+            <div class="held-items">
+                <h4>Held Items</h4>
+                <h2 id="held-item1"></h2>
+                <h2 id="held-item2"></h2>
+                <h2 id="held-item3"></h2>
+            </div>
+            <h4>Battle Item</h4>
+            <h2 id="battle-item"></h2>
+        </div>
         <button id="roll">Roll</button>
         <script src="index.js" charset="utf-8"></script>
     </body>

@@ -530,6 +530,7 @@ const heldItemList = [
     'Wise Glasses'
 ]
 
+// Battle Items
 const battleItemList = [
     'Eject Button',
     'Fluffy Tail',
@@ -542,16 +543,49 @@ const battleItemList = [
     'Shedinja Doll'
 ]
 
+// Background colors
+const backgrounds = {
+    'Attacker': '#f16c38',
+    'Speedster': '#29a5e3',
+    'All-Rounder': '#ce5fd3',
+    'Defender': '#aced5b',
+    'Supporter': '#dc923f'
+}
+
 let pokemonList = {...fullPokemonList}
 
 const generate = () => {
     let pokemon = Object.keys(pokemonList)[Math.floor(Math.random()*Object.keys(pokemonList).length)]
-    let move1 = pokemonList[pokemon]['move1'][Math.floor(Math.random()*pokemonList[pokemon]['move1'].length)]
-    let move2 = pokemonList[pokemon]['move2'][Math.floor(Math.random()*pokemonList[pokemon]['move2'].length)]
+    let role = pokemonList[pokemon]['role']
+    let move1
+    let move2
+
+    // Urshifu's moves are static
+    if (pokemon === 'Urshifu') {
+        let move = Math.floor(Math.random()*2)
+        [move1, move2] = [
+            pokemonList['Urshifu']['move1'][move],
+            pokemonList['Urshifu']['move2'][move]
+        ]
+    }
+    // Blaziken uses all moves
+
+    else {
+        move1 = pokemonList[pokemon]['move1'][Math.floor(Math.random()*pokemonList[pokemon]['move1'].length)]
+        move2 = pokemonList[pokemon]['move2'][Math.floor(Math.random()*pokemonList[pokemon]['move2'].length)]
+    }
     let [item1, item2, item3] = [...heldItemList].sort(() => 0.5 - Math.random()).slice(0, 3)
     let battleItem = battleItemList[Math.floor(Math.random()*battleItemList.length)]
+
+    let imgHTML = `<img src="images/pokemon/meowscarada.png" class="portrait">`
     
-    document.getElementById('pokemon-name').innerText = pokemon
+    // Set up card
+    document.getElementById('pokemon-card').classList.add('active-card')
+    document.getElementById('pokemon-card-image').classList.add('active-img')
+    document.getElementById('pokemon-card-image').style.backgroundColor = backgrounds[role]
+    document.getElementById('pokemon-card-image').innerHTML = imgHTML
+
+    document.getElementById('pokemon-name').innerText = pokemon.toUpperCase()
     document.getElementById('move1').innerText = move1
     document.getElementById('move2').innerText = move2
     document.getElementById('held-item1').innerText = item1
