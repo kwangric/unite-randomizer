@@ -1,6 +1,26 @@
-.inactive {
-    display: none;
+* {
+    font-family: 'PT Sans', sans-serif;
 }
+
+h2 {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.fade {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .portrait {
     background: url('data:image/svg+xml,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><path d="M0 70h70v70H0zM70 0h70v70H70z" opacity=".1"/></svg>');
