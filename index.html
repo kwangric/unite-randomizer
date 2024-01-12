@@ -10,62 +10,72 @@
 </head>
 
 <body>
-    <h1>Pokémon Unite Roulette</h1>
-    <div id="results">
-        <div id="pokemon-card">
-            <div id="pokemon-card-image"></div>
-            <div id="pokemon-card-label">
-                <h2 id="pokemon-name"></h2>
+    <div id="content">
+        <h1 id="title">Pokémon Unite Roulette</h1>
+        <div id="results">
+            <div id="pokemon-card">
+                <div id="pokemon-card-image"></div>
+                <div id="pokemon-card-label">
+                    <h2 id="pokemon-name"></h2>
+                </div>
+            </div>
+
+            <div id="details">
+                <div class="row">
+                    <div class="box">
+                        <h4>Move 1</h4>
+                        <div class="item">
+                            <div id="move1-image"></div>
+                            <!-- <h3 id="move1"></h3> -->
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h4>Move 2</h4>
+                        <div class="item">
+                            <div id="move2-image"></div>
+                            <!-- <h3 id="move2"></h3> -->
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h4>Battle Item</h4>
+                        <div class="item">
+                            <div id="battle-item-image"></div>
+                            <!-- <h3 id="battle-item"></h3> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="held-items">
+                        <h4>Held Items</h4>
+                        <div class="row">
+                            <div class="box">
+                                <div class="item">
+                                    <div id="held-item1-image"></div>
+                                    <!-- <h3 id="held-item1"></h3> -->
+                                </div>
+                            </div>
+                            <div class="box">
+
+                                <div class="item">
+                                    <div id="held-item2-image"></div>
+                                    <!-- <h3 id="held-item2"></h3> -->
+                                </div>
+                            </div>
+                            <div class="box">
+
+                                <div class="item">
+                                    <div id="held-item3-image"></div>
+                                    <!-- <h3 id="held-item3"></h3> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-
-        <div id="details">
-            <div class="row">
-                <div>
-                    <h4>Move 1</h4>
-                    <div class="item">
-                        <div id="move1-image"></div>
-                        <h3 id="move1"></h3>
-                    </div>
-                </div>
-                <div>
-                    <h4>Move 2</h4>
-                    <div class="item">
-                        <div id="move2-image"></div>
-                        <h3 id="move2"></h3>
-                    </div>
-                </div>
-                <div>
-                    <h4>Battle Item</h4>
-                    <div class="item">
-                        <div id="battle-item-image"></div>
-                        <h3 id="battle-item"></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="held-items">
-                    <h4>Held Items</h4>
-                    <div class="row">
-                        <div class="item">
-                            <div id="held-item1-image"></div>
-                            <h3 id="held-item1"></h3>
-                        </div>
-                        <div class="item">
-                            <div id="held-item2-image"></div>
-                            <h3 id="held-item2"></h3>
-                        </div>
-                        <div class="item">
-                            <div id="held-item3-image"></div>
-                            <h3 id="held-item3"></h3>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        <button id="roll">Roll</button>
     </div>
-    <button id="roll">Roll</button>
     <script src="index.js" charset="utf-8"></script>
 </body>
 

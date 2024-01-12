@@ -552,12 +552,12 @@ const backgrounds = {
     'Supporter': '#dc923f'
 }
 
-let pokemonList = {...fullPokemonList}
+let pokemonList = { ...fullPokemonList }
 
 const generate = () => {
     document.getElementById('results').classList.remove('fade')
 
-    let pokemon = Object.keys(pokemonList)[Math.floor(Math.random()*Object.keys(pokemonList).length)]
+    let pokemon = Object.keys(pokemonList)[Math.floor(Math.random() * Object.keys(pokemonList).length)]
     let role = pokemonList[pokemon]['role']
     let move1
     let move2
@@ -567,11 +567,10 @@ const generate = () => {
 
     // Urshifu's moves are static
     if (pokemon === 'Urshifu') {
-        let move = Math.floor(Math.random()*2)
-        [move1, move2] = [
-            pokemonList['Urshifu']['move1'][move],
-            pokemonList['Urshifu']['move2'][move]
-        ]
+        let move = Math.floor(Math.random() * 2)
+        move1 = pokemonList['Urshifu']['move1'][move]
+        move2 = pokemonList['Urshifu']['move2'][move]
+
     }
     // Blaziken uses all moves
     else if (pokemon === 'Blaziken') {
@@ -579,18 +578,18 @@ const generate = () => {
     }
 
     else {
-        move1 = pokemonList[pokemon]['move1'][Math.floor(Math.random()*pokemonList[pokemon]['move1'].length)]
-        move2 = pokemonList[pokemon]['move2'][Math.floor(Math.random()*pokemonList[pokemon]['move2'].length)]
+        move1 = pokemonList[pokemon]['move1'][Math.floor(Math.random() * pokemonList[pokemon]['move1'].length)]
+        move2 = pokemonList[pokemon]['move2'][Math.floor(Math.random() * pokemonList[pokemon]['move2'].length)]
     }
-    
+
     // Zacian must have rusted sword
     if (pokemon === 'Zacian') {
-        item1 = 'Rusted Sword'
         [item2, item3] = [...heldItemList].sort(() => 0.5 - Math.random()).slice(0, 2)
+        item1 = 'Rusted Sword'
     } else {
         [item1, item2, item3] = [...heldItemList].sort(() => 0.5 - Math.random()).slice(0, 3)
     }
-    let battleItem = battleItemList[Math.floor(Math.random()*battleItemList.length)]
+    let battleItem = battleItemList[Math.floor(Math.random() * battleItemList.length)]
 
     let pokemonImgHTML = `<img src="images/pokemon/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="pokemon-portrait">`
     let move1ImgHTML = `<img src="images/moves/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}-${move1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
@@ -599,11 +598,11 @@ const generate = () => {
     let heldItem1ImgHTML = `<img src="images/heldItems/${item1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
     let heldItem2ImgHTML = `<img src="images/heldItems/${item2.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
     let heldItem3ImgHTML = `<img src="images/heldItems/${item3.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
-    
+
     // Set up card
     document.getElementById('pokemon-card').classList.add('active-card')
     document.getElementById('pokemon-card-image').style.backgroundColor = backgrounds[role]
-    document.getElementById('pokemon-card-image').style.borderRadius = '12px'
+    document.getElementById('pokemon-card-image').style.borderRadius = '15px'
     document.getElementById('pokemon-card-image').innerHTML = pokemonImgHTML
     document.getElementById('move1-image').innerHTML = move1ImgHTML
     document.getElementById('move2-image').innerHTML = move2ImgHTML
@@ -613,12 +612,12 @@ const generate = () => {
     document.getElementById('held-item3-image').innerHTML = heldItem3ImgHTML
 
     document.getElementById('pokemon-name').innerText = pokemon.toUpperCase()
-    document.getElementById('move1').innerText = move1
-    document.getElementById('move2').innerText = move2
-    document.getElementById('held-item1').innerText = item1
-    document.getElementById('held-item2').innerText = item2
-    document.getElementById('held-item3').innerText = item3
-    document.getElementById('battle-item').innerText = battleItem
+    // document.getElementById('move1').innerText = move1
+    // document.getElementById('move2').innerText = move2
+    // document.getElementById('held-item1').innerText = item1
+    // document.getElementById('held-item2').innerText = item2
+    // document.getElementById('held-item3').innerText = item3
+    // document.getElementById('battle-item').innerText = battleItem
 
     document.getElementById('results').classList.add('fade')
 }
