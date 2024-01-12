@@ -593,6 +593,8 @@ const generate = () => {
     let battleItem = battleItemList[Math.floor(Math.random()*battleItemList.length)]
 
     let pokemonImgHTML = `<img src="images/pokemon/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="pokemon-portrait">`
+    let move1ImgHTML = `<img src="images/moves/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}-${move1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
+    let move2ImgHTML = `<img src="images/moves/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}-${move2.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
     let battleItemImgHTML = `<img src="images/battleItems/${battleItem.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
     let heldItem1ImgHTML = `<img src="images/heldItems/${item1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
     let heldItem2ImgHTML = `<img src="images/heldItems/${item2.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
@@ -603,6 +605,8 @@ const generate = () => {
     document.getElementById('pokemon-card-image').style.backgroundColor = backgrounds[role]
     document.getElementById('pokemon-card-image').style.borderRadius = '12px'
     document.getElementById('pokemon-card-image').innerHTML = pokemonImgHTML
+    document.getElementById('move1-image').innerHTML = move1ImgHTML
+    document.getElementById('move2-image').innerHTML = move2ImgHTML
     document.getElementById('battle-item-image').innerHTML = battleItemImgHTML
     document.getElementById('held-item1-image').innerHTML = heldItem1ImgHTML
     document.getElementById('held-item2-image').innerHTML = heldItem2ImgHTML
