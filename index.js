@@ -574,6 +574,9 @@ const generate = () => {
         ]
     }
     // Blaziken uses all moves
+    else if (pokemon === 'Blaziken') {
+        [move1, move2] = ['Overheat', 'Blaze Kick']
+    }
 
     else {
         move1 = pokemonList[pokemon]['move1'][Math.floor(Math.random()*pokemonList[pokemon]['move1'].length)]
@@ -594,7 +597,6 @@ const generate = () => {
     let heldItem1ImgHTML = `<img src="images/heldItems/${item1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
     let heldItem2ImgHTML = `<img src="images/heldItems/${item2.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
     let heldItem3ImgHTML = `<img src="images/heldItems/${item3.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
-    // let imgHTML = `<img src="images/pokemon/metagross.png" class="pokemon-portrait">`
     
     // Set up card
     document.getElementById('pokemon-card').classList.add('active-card')
