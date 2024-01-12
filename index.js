@@ -16,6 +16,14 @@ const fullPokemonList = {
         'move1': ['Sacred Sword', 'Shadow Claw'],
         'move2': ['Wide Guard', 'Iron Head']
     },
+    'Alolan Ninetales': {
+        'role': 'Attacker',
+        'difficulty': 'Novice',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Avalanche', 'Dazzling Gleam'],
+        'move2': ['Blizzard', 'Aurora Veil']
+    },
     'Azumarill': {
         'role': 'All-Rounder',
         'difficulty': 'Novice',
@@ -344,14 +352,6 @@ const fullPokemonList = {
         'move1': ['Confusion', 'Psychic'],
         'move2': ['Barrier', 'Power Swap']
     },
-    'Ninetales': {
-        'role': 'Attacker',
-        'difficulty': 'Novice',
-        'attackStyle': 'Ranged',
-        'attackType': 'Special',
-        'move1': ['Avalanche', 'Dazzling Gleam'],
-        'move2': ['Blizzard', 'Aurora Veil']
-    },
     'Pikachu': {
         'role': 'Attacker',
         'difficulty': 'Novice',
@@ -555,6 +555,8 @@ const backgrounds = {
 let pokemonList = {...fullPokemonList}
 
 const generate = () => {
+    document.getElementById('results').classList.add('inactive')
+
     let pokemon = Object.keys(pokemonList)[Math.floor(Math.random()*Object.keys(pokemonList).length)]
     let role = pokemonList[pokemon]['role']
     let move1
@@ -577,12 +579,13 @@ const generate = () => {
     let [item1, item2, item3] = [...heldItemList].sort(() => 0.5 - Math.random()).slice(0, 3)
     let battleItem = battleItemList[Math.floor(Math.random()*battleItemList.length)]
 
-    let imgHTML = `<img src="images/pokemon/meowscarada.png" class="portrait">`
+    let imgHTML = `<img src="images/pokemon/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="portrait">`
+    // let imgHTML = `<img src="images/pokemon/metagross.png" class="portrait">`
     
     // Set up card
     document.getElementById('pokemon-card').classList.add('active-card')
-    document.getElementById('pokemon-card-image').classList.add('active-img')
     document.getElementById('pokemon-card-image').style.backgroundColor = backgrounds[role]
+    document.getElementById('pokemon-card-image').style.borderRadius = '12px'
     document.getElementById('pokemon-card-image').innerHTML = imgHTML
 
     document.getElementById('pokemon-name').innerText = pokemon.toUpperCase()
@@ -592,6 +595,8 @@ const generate = () => {
     document.getElementById('held-item2').innerText = item2
     document.getElementById('held-item3').innerText = item3
     document.getElementById('battle-item').innerText = battleItem
+
+    document.getElementById('results').classList.remove('inactive')
 }
 
 document.getElementById('roll').addEventListener('click', generate)

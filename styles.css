@@ -1,18 +1,25 @@
-.active-img {
+.inactive {
+    display: none;
+}
+
+.portrait {
     background: url('data:image/svg+xml,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><path d="M0 70h70v70H0zM70 0h70v70H70z" opacity=".1"/></svg>');
     background-repeat: repeat;
     background-size: 50%;
     border: solid #19072d 3px;
     border-radius: 12px;
+    width: 207px;
+    height: 238px;
 }
 
 .active-card {
     background-color: #19072d;
     border-radius: 10px;
     color: #fff;
+    font-size: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 215px;
-    max-height: 310px;
+    width: 215px;
+    height: 310px;
 }
