@@ -8,6 +8,10 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    font-size: 1rem;
+}
+
 #results {
     display: flex;
     justify-content: center;
@@ -25,22 +29,7 @@ h2 {
     flex-direction: row;
 }
 
-.fade {
-    animation: fadeIn 1s;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-
-.portrait {
+.pokemon-portrait {
     background: url('data:image/svg+xml,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><path d="M0 70h70v70H0zM70 0h70v70H70z" opacity=".1"/></svg>');
     background-repeat: repeat;
     background-size: 50%;
@@ -60,4 +49,23 @@ h2 {
     align-items: center;
     width: 215px;
     height: 310px;
+}
+
+.small-img {
+    height: 50px;
+    width: 50px;
+}
+
+.fade {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

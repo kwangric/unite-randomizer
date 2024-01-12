@@ -561,6 +561,9 @@ const generate = () => {
     let role = pokemonList[pokemon]['role']
     let move1
     let move2
+    let item1
+    let item2
+    let item3
 
     // Urshifu's moves are static
     if (pokemon === 'Urshifu') {
@@ -576,17 +579,32 @@ const generate = () => {
         move1 = pokemonList[pokemon]['move1'][Math.floor(Math.random()*pokemonList[pokemon]['move1'].length)]
         move2 = pokemonList[pokemon]['move2'][Math.floor(Math.random()*pokemonList[pokemon]['move2'].length)]
     }
-    let [item1, item2, item3] = [...heldItemList].sort(() => 0.5 - Math.random()).slice(0, 3)
+    
+    // Zacian must have rusted sword
+    if (pokemon === 'Zacian') {
+        item1 = 'Rusted Sword'
+        [item2, item3] = [...heldItemList].sort(() => 0.5 - Math.random()).slice(0, 2)
+    } else {
+        [item1, item2, item3] = [...heldItemList].sort(() => 0.5 - Math.random()).slice(0, 3)
+    }
     let battleItem = battleItemList[Math.floor(Math.random()*battleItemList.length)]
 
-    let imgHTML = `<img src="images/pokemon/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="portrait">`
-    // let imgHTML = `<img src="images/pokemon/metagross.png" class="portrait">`
+    let pokemonImgHTML = `<img src="images/pokemon/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="pokemon-portrait">`
+    let battleItemImgHTML = `<img src="images/battleItems/${battleItem.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
+    let heldItem1ImgHTML = `<img src="images/heldItems/${item1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
+    let heldItem2ImgHTML = `<img src="images/heldItems/${item2.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
+    let heldItem3ImgHTML = `<img src="images/heldItems/${item3.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
+    // let imgHTML = `<img src="images/pokemon/metagross.png" class="pokemon-portrait">`
     
     // Set up card
     document.getElementById('pokemon-card').classList.add('active-card')
     document.getElementById('pokemon-card-image').style.backgroundColor = backgrounds[role]
     document.getElementById('pokemon-card-image').style.borderRadius = '12px'
-    document.getElementById('pokemon-card-image').innerHTML = imgHTML
+    document.getElementById('pokemon-card-image').innerHTML = pokemonImgHTML
+    document.getElementById('battle-item-image').innerHTML = battleItemImgHTML
+    document.getElementById('held-item1-image').innerHTML = heldItem1ImgHTML
+    document.getElementById('held-item2-image').innerHTML = heldItem2ImgHTML
+    document.getElementById('held-item3-image').innerHTML = heldItem3ImgHTML
 
     document.getElementById('pokemon-name').innerText = pokemon.toUpperCase()
     document.getElementById('move1').innerText = move1
