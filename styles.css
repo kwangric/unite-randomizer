@@ -8,8 +8,8 @@ body {
 }
 
 h2 {
-    margin: 15px;
-    font-size: 1.25rem;
+    margin: 10px;
+    font-size: 1rem;
     font-weight: bold;
     font-style: italic;
 }
@@ -66,15 +66,15 @@ h4 {
 }
 
 #pokemon-card-image {
-    height: 242px;
+    height: 183px;
 }
 
 #pokemon-portrait {
     margin: 0;
     border: solid #19072d 3px;
     border-radius: 12px;
-    width: 207px;
-    height: 238px;
+    width: 154px;
+    height: 179px;
     background: url('data:image/svg+xml,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><path d="M0 70h70v70H0zM70 0h70v70H70z" opacity=".1"/></svg>');
     background-repeat: repeat;
     background-size: 50%;
@@ -85,8 +85,8 @@ h4 {
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    width: 215px;
-    height: 300px;
+    width: 162px;
+    height: 225px;
     background-color: #19072d;
     font-size: 1rem;
 }
@@ -171,6 +171,11 @@ h4 {
 }
 
 @media (min-width: 750px) {
+    h2 {
+        margin: 15px;
+        font-size: 1.25rem;
+    }
+
     #content {
         height: 500px;
     }
@@ -183,6 +188,20 @@ h4 {
         flex-direction: row;
         width: 650px;
         height: 350px;
+    }
+    
+    #pokemon-card-image {
+        height: 242px;
+    }
+
+    #pokemon-portrait {
+        width: 207px;
+        height: 238px;
+    }
+
+    .active-card {
+        width: 215px;
+        height: 300px;
     }
 
     .item {
