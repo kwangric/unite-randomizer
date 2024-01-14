@@ -611,20 +611,12 @@ const generate = () => {
     document.getElementById('held-item1-image').innerHTML = heldItem1ImgHTML
     document.getElementById('held-item2-image').innerHTML = heldItem2ImgHTML
     document.getElementById('held-item3-image').innerHTML = heldItem3ImgHTML
-
     document.getElementById('pokemon-name').innerText = pokemon.toUpperCase()
-    // document.getElementById('move1').innerText = move1
-    // document.getElementById('move2').innerText = move2
-    // document.getElementById('held-item1').innerText = item1
-    // document.getElementById('held-item2').innerText = item2
-    // document.getElementById('held-item3').innerText = item3
-    // document.getElementById('battle-item').innerText = battleItem
-
 
     setTimeout(() => {
         document.getElementById('results').style.visibility = 'visible'
         document.getElementById('results').style.opacity = 1
-      }, "250")
+    }, "250")
 }
 
 document.getElementById('roll').addEventListener('click', generate)

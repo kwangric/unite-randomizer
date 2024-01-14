@@ -64,7 +64,7 @@ h4 {
     font-weight: bold;
     color: #eee;
 }
-    
+
 #pokemon-card-image {
     height: 242px;
 }
@@ -178,7 +178,7 @@ h4 {
     #title {
         font-size: 2rem;
     }
-    
+
     #results {
         flex-direction: row;
         width: 650px;
