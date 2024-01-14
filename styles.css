@@ -30,15 +30,19 @@ h4 {
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    height: 500px;
+    padding: 20px;
+}
+
+#title {
+    font-size: 1.5rem;
 }
 
 #results {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    gap: 20px;
     align-items: center;
-    height: 350px;
-    width: 650px;
     transition: opacity 1s;
     opacity: 1
 }
@@ -85,7 +89,7 @@ h4 {
 .active-card {
     background-color: #19072d;
     border-radius: 10px;
-    font-size: 1em;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,5 +173,21 @@ h4 {
 
     100% {
         opacity: 1;
+    }
+}
+
+@media (min-width: 750px) {
+    #content {
+        height: 500px;
+    }
+
+    #title {
+        font-size: 2rem;
+    }
+    
+    #results {
+        flex-direction: row;
+        height: 350px;
+        width: 650px;
     }
 }
