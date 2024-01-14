@@ -590,12 +590,12 @@ const generate = () => {
     let battleItem = battleItemList[Math.floor(Math.random() * battleItemList.length)]
 
     let pokemonImgHTML = `<img src="images/pokemon/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}.png" id="pokemon-portrait">`
-    let move1ImgHTML = `<img src="images/moves/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}-${move1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
-    let move2ImgHTML = `<img src="images/moves/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}-${move2.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
-    let battleItemImgHTML = `<img src="images/battleItems/${battleItem.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
-    let heldItem1ImgHTML = `<img src="images/heldItems/${item1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
-    let heldItem2ImgHTML = `<img src="images/heldItems/${item2.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
-    let heldItem3ImgHTML = `<img src="images/heldItems/${item3.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img">`
+    let move1ImgHTML = `<div class="tooltip"><img src="images/moves/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}-${move1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img"><span class="tooltiptext">${move1}</span></div>`
+    let move2ImgHTML = `<div class="tooltip"><img src="images/moves/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}-${move2.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img"><span class="tooltiptext">${move2}</span></div>`
+    let battleItemImgHTML = `<div class="tooltip"><img src="images/battleItems/${battleItem.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img"><span class="tooltiptext">${battleItem}</span></div>`
+    let heldItem1ImgHTML = `<div class="tooltip"><img src="images/heldItems/${item1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img"><span class="tooltiptext">${item1}</span></div>`
+    let heldItem2ImgHTML = `<div class="tooltip"><img src="images/heldItems/${item2.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img"><span class="tooltiptext">${item2}</span></div>`
+    let heldItem3ImgHTML = `<div class="tooltip"><img src="images/heldItems/${item3.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img"><span class="tooltiptext">${item3}</span></div>`
 
     // Set up card
     document.getElementById('pokemon-card').classList.add('active-card')

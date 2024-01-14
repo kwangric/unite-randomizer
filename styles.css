@@ -108,6 +108,51 @@ h4 {
     width: 75px;
 }
 
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #eee;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    top: 105%;
+    left: 50%;
+    margin-left: -60px;
+    pointer-events: none;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover {
+    cursor: help;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0.8;
+}
+
 .fade {
     animation: fadeIn 2s;
 }
