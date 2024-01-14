@@ -555,6 +555,9 @@ const backgrounds = {
 let pokemonList = { ...fullPokemonList }
 
 const generate = () => {
+    document.getElementById('results').style.visibility = 'hidden'
+    document.getElementById('results').style.opacity = 0
+
     let pokemon = Object.keys(pokemonList)[Math.floor(Math.random() * Object.keys(pokemonList).length)]
     let role = pokemonList[pokemon]['role']
     let move1
@@ -616,6 +619,12 @@ const generate = () => {
     // document.getElementById('held-item2').innerText = item2
     // document.getElementById('held-item3').innerText = item3
     // document.getElementById('battle-item').innerText = battleItem
+
+
+    setTimeout(() => {
+        document.getElementById('results').style.visibility = 'visible'
+        document.getElementById('results').style.opacity = 1
+      }, "250")
 }
 
 document.getElementById('roll').addEventListener('click', generate)

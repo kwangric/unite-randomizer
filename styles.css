@@ -39,12 +39,13 @@ h4 {
     align-items: center;
     height: 350px;
     width: 650px;
+    transition: opacity 1s;
+    opacity: 1
 }
 
 #details {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -153,8 +154,12 @@ h4 {
     opacity: 0.8;
 }
 
+.hidden {
+    opacity: 0;
+}
+
 .fade {
-    animation: fadeIn 2s;
+    animation: fadeIn 1s;
 }
 
 @keyframes fadeIn {
