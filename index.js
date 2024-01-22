@@ -619,7 +619,7 @@ const generate = () => {
     }, "250")
 }
 
-document.getElementById('roll').addEventListener('click', generate)
+document.getElementById('spin').addEventListener('click', generate)
 
 generate()
 
