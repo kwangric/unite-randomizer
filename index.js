@@ -626,11 +626,11 @@ document.getElementById('spin').addEventListener('click', generate)
 
 // Set up filters
 const filterPokemon = (newFilter) => {
-    let index = filters.indexOf(newFilter);
+    let index = filters.indexOf(newFilter)
     if (index === -1) {
-        filters.push(newFilter);
+        filters.push(newFilter)
     } else {
-        filters.splice(index, 1);
+        filters.splice(index, 1)
     }
     let filteredPokemon = { ...fullPokemonList }
     for (const pokemon in filteredPokemon) {
@@ -638,7 +638,6 @@ const filterPokemon = (newFilter) => {
             delete filteredPokemon[pokemon]
         }
     }
-    console.log(filteredPokemon)
     if (Object.keys(filteredPokemon).length === 0) {
         filters.pop()
         document.getElementById(newFilter.toLowerCase()).checked = true
@@ -647,25 +646,35 @@ const filterPokemon = (newFilter) => {
     pokemonList = { ...filteredPokemon}
 }
 
-document.querySelectorAll("input[type=checkbox]").forEach((filter) => {
-    filter.addEventListener("click", function (event) {
+document.querySelectorAll('input[type=checkbox]').forEach((filter) => {
+    filter.addEventListener('click', function (event) {
         filterPokemon(event.target.value)
     })
 })
 
 let filtersModal = document.getElementById("filters-modal")
 
-document.getElementById("filters-button").onclick = function () {
-    filtersModal.style.display = "block"
+document.getElementById('filters-button').onclick = function () {
+    filtersModal.style.display = 'block'
 }
 
-document.getElementsByClassName("close")[0].onclick = function () {
-    filtersModal.style.display = "none"
+document.getElementsByClassName('reset')[0].onclick = () => {
+    document.querySelectorAll('input[type=checkbox]').forEach((filter) => {
+        if (!filter.checked) {
+            filter.checked = true
+        }
+        filters.length = 0
+        pokemonList = { ...fullPokemonList}
+    })
+}
+
+document.getElementsByClassName('close')[0].onclick = function () {
+    filtersModal.style.display = 'none'
 }
 
 window.onclick = function (event) {
     if (event.target == filtersModal) {
-        filtersModal.style.display = "none"
+        filtersModal.style.display = 'none'
     }
 }
 
