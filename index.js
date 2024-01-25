@@ -622,7 +622,7 @@ const generate = () => {
 document.getElementById('spin').addEventListener('click', generate)
 
 // Get the modal
-let filters = document.getElementById("filters")
+let filters = document.getElementById("filters-modal")
 
 // Get the button that opens the modal
 document.getElementById("filters-button").onclick = function() {

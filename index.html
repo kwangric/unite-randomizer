@@ -74,15 +74,43 @@
         </div>
         <button id="spin">Spin</button>
         <button id="filters-button">Customize</button>
-        <div id="filters" class="modal">
+        <div id="filters-modal" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>Some text in the Modal..</p>
+                <span class="close">&times;</span>
+                <h4>Filters</h4>
+                <div class="filters">
+                    <div class="roles">
+                        <p class="filter-title">Role</p>
+                        <div class="filter-column">
+                            <input type="checkbox" id="all-rounder" name="all-rounder" value="All-Rounder" checked>
+                            <label for="all-rounder"> All-Rounder</label><br>
+                            <input type="checkbox" id="attacker" name="attacker" value="Attacker" checked>
+                            <label for="attacker"> Attacker</label><br>
+                            <input type="checkbox" id="defender" name="defender" value="Defender" checked>
+                            <label for="defender"> Defender</label><br>
+                            <input type="checkbox" id="speedster" name="speedster" value="Speedster" checked>
+                            <label for="speedster"> Speedster</label><br>
+                            <input type="checkbox" id="supporter" name="supporter" value="Supporter" checked>
+                            <label for="supporter"> Supporter</label><br>
+                        </div>
+                    </div>
+                    <div class="difficulty">
+                        <p class="filter-title">Difficulty</p>
+                        <div class="filter-column">
+                            <input type="checkbox" id="novice" name="novice" value="Novice" checked>
+                            <label for="novice"> Novice</label><br>
+                            <input type="checkbox" id="intermediate" name="intermediate" value="Intermediate" checked>
+                            <label for="intermediate"> Intermediate</label><br>
+                            <input type="checkbox" id="expert" name="expert" value="Expert" checked>
+                            <label for="expert"> Expert</label><br>
+                        </div>
+                    </div>
+                </div>
             </div>
-          
-          </div>
+
+        </div>
     </div>
     <script src="index.js" charset="utf-8"></script>
 </body>
