@@ -361,7 +361,7 @@ const fullPokemonList = {
         'move2': ['Volt Tackle', 'Thunderbolt']
     },
     'Sableye': {
-        'role': 'Support',
+        'role': 'Supporter',
         'difficulty': 'Intermediate',
         'attackStyle': 'Melee',
         'attackType': 'Physical',
@@ -543,6 +543,9 @@ const battleItemList = [
     'Shedinja Doll'
 ]
 
+// Filters
+const filters = []
+
 // Background colors
 const backgrounds = {
     'Attacker': '#f16c38',
@@ -621,24 +624,49 @@ const generate = () => {
 
 document.getElementById('spin').addEventListener('click', generate)
 
-// Get the modal
-let filters = document.getElementById("filters-modal")
+// Set up filters
+const filterPokemon = (newFilter) => {
+    let index = filters.indexOf(newFilter);
+    if (index === -1) {
+        filters.push(newFilter);
+    } else {
+        filters.splice(index, 1);
+    }
+    let filteredPokemon = { ...fullPokemonList }
+    for (const pokemon in filteredPokemon) {
+        if (filters.includes(filteredPokemon[pokemon]['role']) || filters.includes(filteredPokemon[pokemon]['difficulty'])) {
+            delete filteredPokemon[pokemon]
+        }
+    }
+    console.log(filteredPokemon)
+    if (Object.keys(filteredPokemon).length === 0) {
+        filters.pop()
+        document.getElementById(newFilter.toLowerCase()).checked = true
+        return
+    }
+    pokemonList = { ...filteredPokemon}
+}
 
-// Get the button that opens the modal
-document.getElementById("filters-button").onclick = function() {
-    filters.style.display = "block"
-  }
+document.querySelectorAll("input[type=checkbox]").forEach((filter) => {
+    filter.addEventListener("click", function (event) {
+        filterPokemon(event.target.value)
+    })
+})
 
-// Get the <span> element that closes the modal
-document.getElementsByClassName("close")[0].onclick = function() {
-    filters.style.display = "none"
-  }
+let filtersModal = document.getElementById("filters-modal")
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == filters) {
-    filters.style.display = "none"
-  }
+document.getElementById("filters-button").onclick = function () {
+    filtersModal.style.display = "block"
+}
+
+document.getElementsByClassName("close")[0].onclick = function () {
+    filtersModal.style.display = "none"
+}
+
+window.onclick = function (event) {
+    if (event.target == filtersModal) {
+        filtersModal.style.display = "none"
+    }
 }
 
 generate()
