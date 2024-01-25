@@ -616,7 +616,7 @@ const generate = () => {
     setTimeout(() => {
         document.getElementById('results').style.visibility = 'visible'
         document.getElementById('results').style.opacity = 1
-    }, "250")
+    }, "500")
 }
 
 document.getElementById('spin').addEventListener('click', generate)

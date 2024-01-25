@@ -157,7 +157,7 @@ h4 {
 }
 
 .fade {
-    animation: fadeIn 1s;
+    animation: fadeIn 2s;
 }
 
 @keyframes fadeIn {
