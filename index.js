@@ -361,7 +361,7 @@ const fullPokemonList = {
         'move2': ['Volt Tackle', 'Thunderbolt']
     },
     'Sableye': {
-        'role': 'Support',
+        'role': 'Supporter',
         'difficulty': 'Intermediate',
         'attackStyle': 'Melee',
         'attackType': 'Physical',
@@ -543,6 +543,9 @@ const battleItemList = [
     'Shedinja Doll'
 ]
 
+// Filters
+const filters = []
+
 // Background colors
 const backgrounds = {
     'Attacker': '#f16c38',
@@ -620,6 +623,60 @@ const generate = () => {
 }
 
 document.getElementById('spin').addEventListener('click', generate)
+
+// Set up filters
+const filterPokemon = (newFilter) => {
+    let index = filters.indexOf(newFilter)
+    if (index === -1) {
+        filters.push(newFilter)
+    } else {
+        filters.splice(index, 1)
+    }
+    let filteredPokemon = { ...fullPokemonList }
+    for (const pokemon in filteredPokemon) {
+        if (filters.includes(filteredPokemon[pokemon]['role']) || filters.includes(filteredPokemon[pokemon]['difficulty'])) {
+            delete filteredPokemon[pokemon]
+        }
+    }
+    if (Object.keys(filteredPokemon).length === 0) {
+        filters.pop()
+        document.getElementById(newFilter.toLowerCase()).checked = true
+        return
+    }
+    pokemonList = { ...filteredPokemon}
+}
+
+document.querySelectorAll('input[type=checkbox]').forEach((filter) => {
+    filter.addEventListener('click', function (event) {
+        filterPokemon(event.target.value)
+    })
+})
+
+let filtersModal = document.getElementById("filters-modal")
+
+document.getElementById('filters-button').onclick = function () {
+    filtersModal.style.display = 'block'
+}
+
+document.getElementsByClassName('reset')[0].onclick = () => {
+    document.querySelectorAll('input[type=checkbox]').forEach((filter) => {
+        if (!filter.checked) {
+            filter.checked = true
+        }
+        filters.length = 0
+        pokemonList = { ...fullPokemonList}
+    })
+}
+
+document.getElementsByClassName('close')[0].onclick = function () {
+    filtersModal.style.display = 'none'
+}
+
+window.onclick = function (event) {
+    if (event.target == filtersModal) {
+        filtersModal.style.display = 'none'
+    }
+}
 
 generate()
 
