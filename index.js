@@ -621,6 +621,26 @@ const generate = () => {
 
 document.getElementById('spin').addEventListener('click', generate)
 
+// Get the modal
+let filters = document.getElementById("filters")
+
+// Get the button that opens the modal
+document.getElementById("filters-button").onclick = function() {
+    filters.style.display = "block"
+  }
+
+// Get the <span> element that closes the modal
+document.getElementsByClassName("close")[0].onclick = function() {
+    filters.style.display = "none"
+  }
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == filters) {
+    filters.style.display = "none"
+  }
+}
+
 generate()
 
 document.getElementById('content').classList.add('fade')
