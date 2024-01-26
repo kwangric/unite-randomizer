@@ -62,13 +62,13 @@ svg {
 }
 
 #results {
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
     opacity: 1;
-    transition: opacity 1s;
 }
 
 #details {
@@ -126,6 +126,12 @@ svg {
 .small-img {
     width: 50px;
     height: 50px;
+}
+
+.first,
+.second,
+.third {
+    transition: opacity 1s;
 }
 
 /* Tooltip */
@@ -253,7 +259,7 @@ svg {
 }
 
 .fade {
-    animation: fadeIn 2s;
+    animation: fadeIn 1s;
 }
 
 @keyframes fadeIn {

@@ -566,8 +566,13 @@ const backgrounds = {
 let pokemonList = { ...fullPokemonList }
 
 const generate = () => {
-    document.getElementById('results').style.visibility = 'hidden'
-    document.getElementById('results').style.opacity = 0
+    document.getElementById('spin').disabled = true
+    document.getElementsByClassName('first')[0].style.visibility = 'hidden'
+    document.getElementsByClassName('first')[0].style.opacity = 0
+    document.getElementsByClassName('second')[0].style.visibility = 'hidden'
+    document.getElementsByClassName('second')[0].style.opacity = 0
+    document.getElementsByClassName('third')[0].style.visibility = 'hidden'
+    document.getElementsByClassName('third')[0].style.opacity = 0
 
     let pokemon = Object.keys(pokemonList)[Math.floor(Math.random() * Object.keys(pokemonList).length)]
     let role = pokemonList[pokemon]['role']
@@ -625,9 +630,23 @@ const generate = () => {
     document.getElementById('pokemon-name').innerText = pokemon.toUpperCase()
 
     setTimeout(() => {
-        document.getElementById('results').style.visibility = 'visible'
-        document.getElementById('results').style.opacity = 1
-    }, "500")
+        document.getElementsByClassName('first')[0].style.visibility = 'visible'
+        document.getElementsByClassName('first')[0].style.opacity = 1
+    }, 500)
+
+    setTimeout(() => {
+        document.getElementsByClassName('second')[0].style.visibility = 'visible'
+        document.getElementsByClassName('second')[0].style.opacity = 1
+    }, 1000)
+
+    setTimeout(() => {
+        document.getElementsByClassName('third')[0].style.visibility = 'visible'
+        document.getElementsByClassName('third')[0].style.opacity = 1
+    }, 1500)
+
+    setTimeout(() => {
+        document.getElementById('spin').disabled = false
+    }, 2000)
 }
 
 document.getElementById('spin').addEventListener('click', generate)
@@ -651,7 +670,7 @@ const filterPokemon = (newFilter) => {
         document.getElementById(newFilter.toLowerCase()).checked = true
         return
     }
-    pokemonList = { ...filteredPokemon}
+    pokemonList = { ...filteredPokemon }
 }
 
 document.querySelectorAll('input[type=checkbox]').forEach((filter) => {
@@ -672,7 +691,7 @@ document.getElementsByClassName('reset')[0].onclick = () => {
             filter.checked = true
         }
         filters.length = 0
-        pokemonList = { ...fullPokemonList}
+        pokemonList = { ...fullPokemonList }
     })
 }
 
@@ -685,7 +704,9 @@ window.onclick = function (event) {
         filtersModal.style.display = 'none'
     }
 }
+setTimeout(() => {
+    generate()
+}, 500)
 
-generate()
 
 document.getElementById('content').classList.add('fade')
