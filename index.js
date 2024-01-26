@@ -240,6 +240,14 @@ const fullPokemonList = {
         'move1': ['Water Shuriken', 'Surf'],
         'move2': ['Double Team', 'Smokescreen']
     },
+    'Gyarados': {
+        'role': 'All-Rounder',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Dragon Breath', 'Aqua Tail'],
+        'move2': ['Waterfall', 'Bounce']
+    },
     'Hoopa': {
         'role': 'Supporter',
         'difficulty': 'Expert',
