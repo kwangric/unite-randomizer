@@ -187,7 +187,8 @@ svg {
 .modal-content {
     position: relative;
     background-color: rgba(0, 0, 0, .95);
-    margin: 25% 5px;
+    max-width: 300px;
+    margin: 25% auto;
     padding: 20px;
     border: 1px solid #eee;
     border-radius: 25px;
@@ -201,7 +202,7 @@ svg {
 .reset {
     position: absolute;
     top: 18px;
-    right: 55px;
+    right: 50px;
     color: #aaa;
     float: right;
     font-size: 20px;
@@ -217,11 +218,11 @@ svg {
 
 .close {
     position: absolute;
-    top: 5px;
+    top: 18px;
     right: 30px;
     color: #aaa;
     float: right;
-    font-size: 38px;
+    font-size: 20px;
     font-weight: bold;
 }
 
