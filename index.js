@@ -352,6 +352,14 @@ const fullPokemonList = {
         'move1': ['Play Rough', 'Shadow Claw'],
         'move2': ['Shadow Sneak', 'Trick Room']
     },
+    'Miraidon': {
+        'role': 'Attacker',
+        'difficulty': 'Expert',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Charge Beam', 'Electro Drift'],
+        'move2': ['Thunder', 'Parabolic Charge']
+    },
     'Mr. Mime': {
         'role': 'Supporter',
         'difficulty': 'Intermediate',
