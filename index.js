@@ -64,6 +64,14 @@ const fullPokemonList = {
         'move1': ['Lunge', 'Smack Down'],
         'move2': ['Leech Life', 'Superpower']
     },
+    'Ceruledge': {
+        'role': 'All-Rounder',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Bitter Blade', 'Psycho Cut'],
+        'move2': ['Phantom Force', 'Flame Charge']
+    },
     'Chandelure': {
         'role': 'Attacker',
         'difficulty': 'Novice',
@@ -183,6 +191,14 @@ const fullPokemonList = {
         'attackType': 'Special',
         'move1': ['Psyshock', 'Stored Power'],
         'move2': ['Psybeam', 'Future Sight']
+    },
+    'Falinks': {
+        'role': 'All-Rounder',
+        'difficulty': 'Expert',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Megahorn', 'Iron Head'],
+        'move2': ['No Retreat', 'Beat Up']
     },
     'Garchomp': {
         'role': 'All-Rounder',
