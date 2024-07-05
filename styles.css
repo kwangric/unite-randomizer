@@ -1,3 +1,7 @@
+html {
+    font-size: 16px;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -7,20 +11,8 @@ body {
     color: #eee;
 }
 
-h2 {
-    margin: 7px 0;
-    font-size: 0.75rem;
-    font-weight: bold;
-    font-style: italic;
-}
-
-h3 {
-    margin: 0;
-    font-size: 1rem;
-}
-
-h4 {
-    margin: 5px 0;
+a {
+    color: inherit;
 }
 
 button {
@@ -93,6 +85,13 @@ svg {
     background-size: 50%;
 }
 
+#pokemon-name {
+    margin: 7px 0;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
 .active-card {
     display: flex;
     flex-direction: column;
@@ -109,6 +108,11 @@ svg {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.row-label {
+    margin: 5px 0;
+    font-size: 1rem;
 }
 
 .item {
@@ -273,15 +277,6 @@ svg {
 }
 
 @media (min-width: 750px) {
-    h2 {
-        margin: 15px;
-        font-size: 1.25rem;
-    }
-
-    h4 {
-        margin: 10px 0;
-    }
-
     svg {
         width: 24px;
         height: 24px;
@@ -308,6 +303,15 @@ svg {
     #pokemon-portrait {
         width: 207px;
         height: 238px;
+    }
+
+    #pokemon-name {
+        margin: 15px;
+        font-size: 1.25rem;
+    }
+
+    .row-label {
+        margin: 10px 0;
     }
 
     .active-card {
