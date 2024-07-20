@@ -264,6 +264,14 @@ const fullPokemonList = {
         'move1': ['Dragon Breath', 'Aqua Tail'],
         'move2': ['Waterfall', 'Bounce']
     },
+    'Ho-Oh': {
+        'role': 'Defender',
+        'difficulty': 'Novice',
+        'attackStyle': 'Ranged',
+        'attackType': 'Physical',
+        'move1': ['Fly', 'Fire Spin'],
+        'move2': ['Flamethrower', 'Sky Attack']
+    },
     'Hoopa': {
         'role': 'Supporter',
         'difficulty': 'Expert',
