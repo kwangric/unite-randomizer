@@ -28,7 +28,7 @@ button {
     visibility: hidden;
 }
 
-svg {
+.gear {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -69,6 +69,21 @@ svg {
     align-items: center;
 }
 
+#pokemon-card {
+    position: relative;
+}
+
+.pokemon-lock {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    fill: #eee;
+}
+
+.lock {
+    height: 12px;
+    width: auto;
+}
 
 #pokemon-card-image {
     height: 121px;
