@@ -605,6 +605,8 @@ const generate = () => {
     document.getElementsByClassName('second')[0].style.opacity = 0
     document.getElementsByClassName('third')[0].style.visibility = 'hidden'
     document.getElementsByClassName('third')[0].style.opacity = 0
+    document.getElementsByClassName('fourth')[0].style.visibility = 'hidden'
+    document.getElementsByClassName('fourth')[0].style.opacity = 0
 
     let pokemon = Object.keys(pokemonList)[Math.floor(Math.random() * Object.keys(pokemonList).length)]
     let role = pokemonList[pokemon]['role']
@@ -677,6 +679,8 @@ const generate = () => {
     }, 1500)
 
     setTimeout(() => {
+        document.getElementsByClassName('fourth')[0].style.visibility = 'visible'
+        document.getElementsByClassName('fourth')[0].style.opacity = 1
         document.getElementById('spin').disabled = false
     }, 2000)
 }
