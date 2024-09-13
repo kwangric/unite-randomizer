@@ -24,6 +24,14 @@ const fullPokemonList = {
         'move1': ['Avalanche', 'Dazzling Gleam'],
         'move2': ['Blizzard', 'Aurora Veil']
     },
+    'Armarouge': {
+        'role': 'Attacker',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Fire Spin', 'Armor Cannon'],
+        'move2': ['Flame Charge', 'Psyshock']
+    },
     'Azumarill': {
         'role': 'All-Rounder',
         'difficulty': 'Novice',
