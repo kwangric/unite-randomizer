@@ -136,6 +136,14 @@ const fullPokemonList = {
         'move1': ['Rock Tomb', 'Shell Smash'],
         'move2': ['Stealth Rock', 'X-Scissor']
     },
+    'Darkrai': {
+        'role': 'Speedster',
+        'difficulty': 'Expert',
+        'attackStyle': 'Melee',
+        'attackType': 'Special',
+        'move1': ['Dark Void', 'Shadow Claw'],
+        'move2': ['Nasty Plot', 'Dark Pulse']
+    },
     'Decidueye': {
         'role': 'Attacker',
         'difficulty': 'Intermediate',
