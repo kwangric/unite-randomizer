@@ -592,6 +592,7 @@ const battleItemList = [
     'Fluffy Tail',
     'Full Heal',
     'Goal Getter',
+    'Goal Hacker',
     'Potion',
     'Slow Smoke',
     'X Attack',
