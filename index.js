@@ -416,6 +416,14 @@ const fullPokemonList = {
         'move1': ['Electro Ball', 'Thunder'],
         'move2': ['Volt Tackle', 'Thunderbolt']
     },
+    'Psyduck': {
+        'role': 'Supporter',
+        'difficulty': 'Novice',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Surf', 'Bubble Beam'],
+        'move2': ['Disable', 'Psychic']
+    },
     'Sableye': {
         'role': 'Supporter',
         'difficulty': 'Intermediate',
