@@ -480,6 +480,14 @@ const fullPokemonList = {
         'move1': ['Flame Charge', 'Aerial Ace'],
         'move2': ['Fly', 'Brave Bird']
     },
+    'Tinkaton': {
+        'role': 'All-Rounder',
+        'difficulty': 'Novice',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Gigaton Hammer', 'Smack Down'],
+        'move2': ['Ice Hammer', 'Thief']
+    },
     'Trevenant': {
         'role': 'Defender',
         'difficulty': 'Intermediate',
