@@ -48,8 +48,7 @@
                     <h2 id="pokemon-name"></h2>
                 </div>
                 <div class="pokemon-lock">
-                    <svg class="lock unlocked" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 576 512">
+                    <svg class="lock unlocked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                         <path
                             d="M352 144c0-44.2 35.8-80 80-80s80 35.8 80 80l0 48c0 17.7 14.3 32 32 32s32-14.3 32-32l0-48C576 64.5 511.5 0 432 0S288 64.5 288 144l0 48L64 192c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-192c0-35.3-28.7-64-64-64l-32 0 0-48z" />
                     </svg>
@@ -117,32 +116,39 @@
                 <span class="reset">&#10227;</span>
                 <span class="close">X</span>
                 <h2 class="modal-title">Filters</h2>
-                <div class="filters">
-                    <div class="roles">
-                        <p class="filter-title">Role</p>
-                        <div class="filter-column">
-                            <input type="checkbox" id="all-rounder" name="all-rounder" value="All-Rounder" checked>
-                            <label for="all-rounder"> All-Rounder</label><br>
-                            <input type="checkbox" id="attacker" name="attacker" value="Attacker" checked>
-                            <label for="attacker"> Attacker</label><br>
-                            <input type="checkbox" id="defender" name="defender" value="Defender" checked>
-                            <label for="defender"> Defender</label><br>
-                            <input type="checkbox" id="speedster" name="speedster" value="Speedster" checked>
-                            <label for="speedster"> Speedster</label><br>
-                            <input type="checkbox" id="supporter" name="supporter" value="Supporter" checked>
-                            <label for="supporter"> Supporter</label><br>
+                <div>
+                    <div id="filters" class="filters">
+                        <div class="roles">
+                            <p class="filter-title">Role</p>
+                            <div class="filter-column">
+                                <input type="checkbox" id="all-rounder" name="all-rounder" value="All-Rounder" checked>
+                                <label for="all-rounder"> All-Rounder</label><br>
+                                <input type="checkbox" id="attacker" name="attacker" value="Attacker" checked>
+                                <label for="attacker"> Attacker</label><br>
+                                <input type="checkbox" id="defender" name="defender" value="Defender" checked>
+                                <label for="defender"> Defender</label><br>
+                                <input type="checkbox" id="speedster" name="speedster" value="Speedster" checked>
+                                <label for="speedster"> Speedster</label><br>
+                                <input type="checkbox" id="supporter" name="supporter" value="Supporter" checked>
+                                <label for="supporter"> Supporter</label><br>
+                            </div>
+                        </div>
+                        <div class="difficulty">
+                            <p class="filter-title">Difficulty</p>
+                            <div class="filter-column">
+                                <input type="checkbox" id="novice" name="novice" value="Novice" checked>
+                                <label for="novice"> Novice</label><br>
+                                <input type="checkbox" id="intermediate" name="intermediate" value="Intermediate"
+                                    checked>
+                                <label for="intermediate"> Intermediate</label><br>
+                                <input type="checkbox" id="expert" name="expert" value="Expert" checked>
+                                <label for="expert"> Expert</label><br>
+                            </div>
                         </div>
                     </div>
-                    <div class="difficulty">
-                        <p class="filter-title">Difficulty</p>
-                        <div class="filter-column">
-                            <input type="checkbox" id="novice" name="novice" value="Novice" checked>
-                            <label for="novice"> Novice</label><br>
-                            <input type="checkbox" id="intermediate" name="intermediate" value="Intermediate" checked>
-                            <label for="intermediate"> Intermediate</label><br>
-                            <input type="checkbox" id="expert" name="expert" value="Expert" checked>
-                            <label for="expert"> Expert</label><br>
-                        </div>
+                    <div class="random">
+                        <input type="checkbox" id="trueRandom" name="trueRandom" value="True Random">
+                        <label for="trueRandom"> True Random</label>
                     </div>
                 </div>
                 <div>

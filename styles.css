@@ -262,17 +262,24 @@ button {
 
 .filters {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    column-gap: 50px;
+    row-gap: 15px;
     line-height: 200%;
 }
 
 .filter-title {
-    margin: 0.5rem 0;
+    margin: 0;
+    text-decoration: underline;
 }
 
 .filter-column {
     text-align: left;
+}
+
+.random {
+    margin: 10px 0;
 }
 
 .fade {

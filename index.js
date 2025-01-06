@@ -679,12 +679,24 @@ const generate = () => {
         move2 = pokemonList[pokemon]['move2'][Math.floor(Math.random() * pokemonList[pokemon]['move2'].length)]
     }
 
+    let heldItems
+    if (!document.querySelector('#trueRandom').checked) {
+        if ('Physical' === pokemonList[pokemon]['attackType']) {
+            heldItems = heldItemList.filter((item) => {return !['Choice Specs', 'Curse Incense', 'Sp. Atk Specs', 'Slick Spoon', 'Wise Glasses'].includes(item)})
+        } else {
+            heldItems = heldItemList.filter((item) => {return !['Attack Weight', 'Cursed Bangle', 'Scope Lens'].includes(item)})
+        }
+    } else {
+        heldItems = [...heldItemList]
+    }
+    console.log(heldItems)
+
     // Zacian must have rusted sword
     if (pokemon === 'Zacian') {
-        [item2, item3] = [...heldItemList].sort(() => 0.5 - Math.random()).slice(0, 2)
+        [item2, item3] = heldItems.sort(() => 0.5 - Math.random()).slice(0, 2)
         item1 = 'Rusted Sword'
     } else {
-        [item1, item2, item3] = [...heldItemList].sort(() => 0.5 - Math.random()).slice(0, 3)
+        [item1, item2, item3] = heldItems.sort(() => 0.5 - Math.random()).slice(0, 3)
     }
     let battleItem = battleItemList[Math.floor(Math.random() * battleItemList.length)]
 
@@ -756,7 +768,7 @@ const filterPokemon = (newFilter) => {
     pokemonList = { ...filteredPokemon }
 }
 
-document.querySelectorAll('input[type=checkbox]').forEach((filter) => {
+document.querySelector('#filters').querySelectorAll('input[type=checkbox]').forEach((filter) => {
     filter.addEventListener('click', function (event) {
         filterPokemon(event.target.value)
     })
@@ -769,7 +781,7 @@ document.getElementById('filters-button').onclick = function () {
 }
 
 document.getElementsByClassName('reset')[0].onclick = () => {
-    document.querySelectorAll('input[type=checkbox]').forEach((filter) => {
+    document.querySelector('#filters').querySelectorAll('input[type=checkbox]').forEach((filter) => {
         if (!filter.checked) {
             filter.checked = true
         }
