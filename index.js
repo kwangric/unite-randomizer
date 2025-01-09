@@ -684,7 +684,7 @@ const generate = () => {
         if ('Physical' === pokemonList[pokemon]['attackType']) {
             heldItems = heldItemList.filter((item) => {return !['Choice Specs', 'Curse Incense', 'Sp. Atk Specs', 'Slick Spoon', 'Wise Glasses'].includes(item)})
         } else {
-            heldItems = heldItemList.filter((item) => {return !['Attack Weight', 'Cursed Bangle', 'Scope Lens'].includes(item)})
+            heldItems = heldItemList.filter((item) => {return !['Attack Weight', 'Cursed Bangle', 'Drain Crown', 'Razor Claw', 'Scope Lens'].includes(item)})
         }
     } else {
         heldItems = [...heldItemList]
