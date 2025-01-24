@@ -216,6 +216,14 @@ const fullPokemonList = {
         'move1': ['Megahorn', 'Iron Head'],
         'move2': ['No Retreat', 'Beat Up']
     },
+    'Galarian Rapidash': {
+        'role': 'Speedster',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Dazzling Gleam', 'Fairy Wind'],
+        'move2': ['Smart Strike', 'Agility']
+    },
     'Garchomp': {
         'role': 'All-Rounder',
         'difficulty': 'Intermediate',
