@@ -697,7 +697,6 @@ const generate = () => {
     } else {
         heldItems = [...heldItemList]
     }
-    console.log(heldItems)
 
     // Zacian must have rusted sword
     if (pokemon === 'Zacian') {
