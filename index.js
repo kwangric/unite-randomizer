@@ -472,6 +472,14 @@ const fullPokemonList = {
         'move1': ['Heavy Slam', 'Flail'],
         'move2': ['Block', 'Yawn']
     },
+    'Suicune': {
+        'role': 'All-Rounder',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Whirlpool', 'Surf'],
+        'move2': ['Ice Beam', 'Icy Wind']
+    },
     'Sylveon': {
         'role': 'Attacker',
         'difficulty': 'Novice',
