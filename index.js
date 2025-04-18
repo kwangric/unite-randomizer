@@ -24,6 +24,14 @@ const fullPokemonList = {
         'move1': ['Avalanche', 'Dazzling Gleam'],
         'move2': ['Blizzard', 'Aurora Veil']
     },
+    'Alolan Raichu': {
+        'role': 'Attacker',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Stored Power', 'Electro Ball'],
+        'move2': ['Thunderbolt', 'Psychic']
+    },
     'Armarouge': {
         'role': 'Attacker',
         'difficulty': 'Intermediate',
