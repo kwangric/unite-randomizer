@@ -16,6 +16,14 @@ const fullPokemonList = {
         'move1': ['Sacred Sword', 'Shadow Claw'],
         'move2': ['Wide Guard', 'Iron Head']
     },
+    'Alcremie': {
+        'role': 'Supporter',
+        'difficulty': 'Novice',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Decorate', 'Recover'],
+        'move2': ['Dazzling Gleam', 'Sweet Scent']
+    },
     'Alolan Ninetales': {
         'role': 'Attacker',
         'difficulty': 'Novice',
