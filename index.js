@@ -336,6 +336,14 @@ const fullPokemonList = {
         'move1': ['Water Pulse', 'Perish Song'],
         'move2': ['Bubble Beam', 'Ice Beam']
     },
+    'Latios': {
+        'role': 'Attacker',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Luster Purge', 'Telekinesis'],
+        'move2': ['Dragon Pulse', 'Draco Meteor']
+    },
     'Leafeon': {
         'role': 'Speedster',
         'difficulty': 'Intermediate',
