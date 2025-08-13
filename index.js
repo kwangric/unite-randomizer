@@ -336,6 +336,14 @@ const fullPokemonList = {
         'move1': ['Water Pulse', 'Perish Song'],
         'move2': ['Bubble Beam', 'Ice Beam']
     },
+    'Latias': {
+        'role': 'Supporter',
+        'difficulty': 'Novice',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Mist Ball', 'Dragon Cheer'],
+        'move2': ['Dragon Pulse', 'Draco Breath']
+    },
     'Latios': {
         'role': 'Attacker',
         'difficulty': 'Intermediate',
