@@ -216,6 +216,14 @@ const fullPokemonList = {
         'move1': ['Pollen Puff', 'Leaf Tornado'],
         'move2': ['Cotton Guard', 'Cotton Spore']
     },
+    'Empoleon': {
+        'role': 'All-Rounder',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Special',
+        'move1': ['Hydro Cannon', 'Whirlpool'],
+        'move2': ['Metal Claw', 'Aqua Jet']
+    },
     'Espeon': {
         'role': 'Attacker',
         'difficulty': 'Intermediate',
@@ -455,6 +463,14 @@ const fullPokemonList = {
         'attackType': 'Special',
         'move1': ['Electro Ball', 'Thunder'],
         'move2': ['Volt Tackle', 'Thunderbolt']
+    },
+    'Pawmot': {
+        'role': 'All-Rounder',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Thunder Punch', 'Supercell Slam'],
+        'move2': ['Volt Switch', 'Mach Punch']
     },
     'Psyduck': {
         'role': 'Supporter',
