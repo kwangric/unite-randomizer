@@ -69,8 +69,8 @@ const fullPokemonList = {
         'difficulty': 'Expert',
         'attackStyle': 'Melee',
         'attackType': 'Physical',
-        'move1': ['Fire Punch', 'Overheat'],
-        'move2': ['Focus Blast', 'Blaze Kick']
+        'move1': ['Overheat'],
+        'move2': ['Blaze Kick']
     },
     'Blissey': {
         'role': 'Supporter',
@@ -392,6 +392,38 @@ const fullPokemonList = {
         'move1': ['Icicle Crash', 'Ice Fang'],
         'move2': ['High Horsepower', 'Earthquake']
     },
+    'Mega Charizard X': {
+        'role': 'All-Rounder',
+        'difficulty': 'Novice',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Fire Punch'],
+        'move2': ['Flare Blitz']
+    },
+    'Mega Lucario': {
+        'role': 'All-Rounder',
+        'difficulty': 'Expert',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Power-Up Punch'],
+        'move2': ['Close Combat']
+    },
+    'Mega Mewtwo X': {
+        'role': 'All-Rounder',
+        'difficulty': 'Novice',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Future Sight', 'Psystrike'],
+        'move2': ['Recover', 'Teleport']
+    },
+    'Mega Mewtwo Y': {
+        'role': 'Attacker',
+        'difficulty': 'Novice',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Future Sight', 'Psystrike'],
+        'move2': ['Recover', 'Teleport']
+    },
     'Meowscarada': {
         'role': 'Speedster',
         'difficulty': 'Intermediate',
@@ -415,22 +447,6 @@ const fullPokemonList = {
         'attackType': 'Special',
         'move1': ['Electro Ball', 'Solar Beam', 'Surf'],
         'move2': ['Coaching', 'Light Screen', 'Agility']
-    },
-    'Mewtwo X': {
-        'role': 'All-Rounder',
-        'difficulty': 'Novice',
-        'attackStyle': 'Melee',
-        'attackType': 'Physical',
-        'move1': ['Future Sight', 'Psystrike'],
-        'move2': ['Recover', 'Teleport']
-    },
-    'Mewtwo Y': {
-        'role': 'Attacker',
-        'difficulty': 'Novice',
-        'attackStyle': 'Ranged',
-        'attackType': 'Special',
-        'move1': ['Future Sight', 'Psystrike'],
-        'move2': ['Recover', 'Teleport']
     },
     'Mimikyu': {
         'role': 'All-Rounder',
@@ -592,6 +608,14 @@ const fullPokemonList = {
         'move1': ['Wicked Blow', 'Surging Strikes'],
         'move2': ['Throat Chop', 'Liquidation']
     },
+    'Vaporeon': {
+        'role': 'Defender',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Hydro Pump', 'Muddy Water'],
+        'move2': ['Aqua Ring', 'Flip Turn']
+    },
     'Venusaur': {
         'role': 'Attacker',
         'difficulty': 'Novice',
@@ -636,15 +660,20 @@ const fullPokemonList = {
 
 // Held Items
 const heldItemList = [
+    'Accel Bracer',
     'Aeos Cookie',
+    'Amulet Coin',
     'Assault Vest',
     'Attack Weight',
+    'Big Root',
     'Buddy Barrier',
     'Charging Charm',
+    'Choice Scarf',
     'Choice Specs',
     'Curse Bangle',
     'Curse Incense',
     'Drain Crown',
+    'Drive Lens',
     'Energy Amplifier',
     'Exp. Share',
     'Float Stone',
@@ -656,12 +685,12 @@ const heldItemList = [
     'Rescue Hood',
     'Resonant Guard',
     'Rocky Helmet',
-    // 'Rusted Sword',
     'Scope Lens',
     'Score Shield',
     'Shell Bell',
     'Slick Spoon',
     'Sp. Atk Specs',
+    'Tenacity Belt',
     'Weakness Policy',
     'Wise Glasses'
 ]
@@ -733,34 +762,43 @@ const generate = () => {
         move2 = pokemonList['Urshifu']['move2'][move]
 
     }
-    // Blaziken uses all moves
-    else if (pokemon === 'Blaziken') {
-        [move1, move2] = ['Overheat', 'Blaze Kick']
-    }
-
     else {
         move1 = pokemonList[pokemon]['move1'][Math.floor(Math.random() * pokemonList[pokemon]['move1'].length)]
         move2 = pokemonList[pokemon]['move2'][Math.floor(Math.random() * pokemonList[pokemon]['move2'].length)]
     }
 
+    // True Random Check
     let heldItems
     if (!document.querySelector('#trueRandom').checked) {
         if ('Physical' === pokemonList[pokemon]['attackType']) {
-            heldItems = heldItemList.filter((item) => {return !['Choice Specs', 'Curse Incense', 'Sp. Atk Specs', 'Slick Spoon', 'Wise Glasses'].includes(item)})
+            heldItems = heldItemList.filter((item) => {return !['Choice Specs', 'Curse Incense', 'Drive Lens', 'Sp. Atk Specs', 'Slick Spoon', 'Wise Glasses'].includes(item)})
         } else {
-            heldItems = heldItemList.filter((item) => {return !['Attack Weight', 'Cursed Bangle', 'Drain Crown', 'Razor Claw', 'Scope Lens'].includes(item)})
+            heldItems = heldItemList.filter((item) => {return !['Accel Bracer', 'Attack Weight', 'Cursed Bangle', 'Drain Crown', 'Razor Claw', 'Scope Lens'].includes(item)})
         }
     } else {
         heldItems = [...heldItemList]
     }
 
-    // Zacian must have rusted sword
-    if (pokemon === 'Zacian') {
-        [item2, item3] = heldItems.sort(() => 0.5 - Math.random()).slice(0, 2)
-        item1 = 'Rusted Sword'
-    } else {
-        [item1, item2, item3] = heldItems.sort(() => 0.5 - Math.random()).slice(0, 3)
+    // Roll Held Items
+    [item1, item2, item3] = heldItems.sort(() => 0.5 - Math.random()).slice(0, 3)
+    switch (pokemon) {
+        case "Mega Lucario":
+            item1 = "Lucarionite"
+            break
+        case "Mega Charizard X":
+            item1 = "Charizardite X"
+            break
+        case "Mega Mewtwo X":
+            item1 = "Mewtwonite X"
+            break
+        case "Mega Mewtwo Y":
+            item1 = "Mewtwonite Y"
+            break
+        case "Zacian":
+            item1 = "Rusted Sword"
+            break
     }
+
     let battleItem = battleItemList[Math.floor(Math.random() * battleItemList.length)]
 
     let pokemonImgHTML = `<img src="images/pokemon/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}.png" alt="${pokemon}" id="pokemon-portrait">`
