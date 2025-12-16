@@ -400,6 +400,14 @@ const fullPokemonList = {
         'move1': ['Fire Punch'],
         'move2': ['Flare Blitz']
     },
+    'Mega Gyarados': {
+        'role': 'All-Rounder',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Dragon Breath'],
+        'move2': ['Waterfall']
+    },
     'Mega Lucario': {
         'role': 'All-Rounder',
         'difficulty': 'Expert',
@@ -787,6 +795,9 @@ const generate = () => {
             break
         case "Mega Charizard X":
             item1 = "Charizardite X"
+            break
+        case "Mega Gyarados":
+            item1 = "Gyaradosite"
             break
         case "Mega Mewtwo X":
             item1 = "Mewtwonite X"
