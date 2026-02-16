@@ -440,6 +440,14 @@ const fullPokemonList = {
         'move1': ['Flower Trick', 'Night Slash'],
         'move2': ['Double Team', 'Trailblaze']
     },
+    'Meowth': {
+        'role': 'Speedster',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Pay Day', 'Fury Swipes'],
+        'move2': ['Feint Attack', 'Assurance']
+    },
     'Metagross': {
         'role': 'All-Rounder',
         'difficulty': 'Intermediate',
@@ -527,6 +535,14 @@ const fullPokemonList = {
         'attackType': 'Physical',
         'move1': ['Dual Wingbeat'],
         'move2': ['Double Hit', 'Swords Dance']
+    },
+    "Sirfetch'd": {
+        'role': 'All-Rounder',
+        'difficulty': 'Expert',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Fury Cutter', 'Leaf Blade'],
+        'move2': ['Brutal Swing', 'Detect']
     },
     'Slowbro': {
         'role': 'Defender',
@@ -699,6 +715,7 @@ const heldItemList = [
     'Slick Spoon',
     'Sp. Atk Specs',
     'Tenacity Belt',
+    'Vanguard Belt',
     'Weakness Policy',
     'Wise Glasses'
 ]
@@ -812,13 +829,13 @@ const generate = () => {
 
     let battleItem = battleItemList[Math.floor(Math.random() * battleItemList.length)]
 
-    let pokemonImgHTML = `<img src="images/pokemon/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}.png" alt="${pokemon}" id="pokemon-portrait">`
-    let move1ImgHTML = `<div class="tooltip"><img src="images/moves/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}-${move1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img" alt="${move1}"><span class="tooltiptext">${move1}</span></div>`
-    let move2ImgHTML = `<div class="tooltip"><img src="images/moves/${pokemon.replace('.', '').toLowerCase().split(' ').join('-')}-${move2.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img" alt="${move2}"><span class="tooltiptext">${move2}</span></div>`
-    let battleItemImgHTML = `<div class="tooltip"><img src="images/battleItems/${battleItem.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img" alt="${battleItem}"><span class="tooltiptext">${battleItem}</span></div>`
-    let heldItem1ImgHTML = `<div class="tooltip"><img src="images/heldItems/${item1.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img" alt="${item1}"><span class="tooltiptext">${item1}</span></div>`
-    let heldItem2ImgHTML = `<div class="tooltip"><img src="images/heldItems/${item2.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img" alt="${item2}"><span class="tooltiptext">${item2}</span></div>`
-    let heldItem3ImgHTML = `<div class="tooltip"><img src="images/heldItems/${item3.replace('.', '').toLowerCase().split(' ').join('-')}.png" class="small-img" alt="${item3}"><span class="tooltiptext">${item3}</span></div>`
+    let pokemonImgHTML = `<img src="images/pokemon/${pokemon.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-')}.png" alt="${pokemon}" id="pokemon-portrait">`
+    let move1ImgHTML = `<div class="tooltip"><img src="images/moves/${pokemon.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-')}-${move1.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-')}.png" class="small-img" alt="${move1}"><span class="tooltiptext">${move1}</span></div>`
+    let move2ImgHTML = `<div class="tooltip"><img src="images/moves/${pokemon.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-')}-${move2.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-')}.png" class="small-img" alt="${move2}"><span class="tooltiptext">${move2}</span></div>`
+    let battleItemImgHTML = `<div class="tooltip"><img src="images/battleItems/${battleItem.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-')}.png" class="small-img" alt="${battleItem}"><span class="tooltiptext">${battleItem}</span></div>`
+    let heldItem1ImgHTML = `<div class="tooltip"><img src="images/heldItems/${item1.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-')}.png" class="small-img" alt="${item1}"><span class="tooltiptext">${item1}</span></div>`
+    let heldItem2ImgHTML = `<div class="tooltip"><img src="images/heldItems/${item2.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-')}.png" class="small-img" alt="${item2}"><span class="tooltiptext">${item2}</span></div>`
+    let heldItem3ImgHTML = `<div class="tooltip"><img src="images/heldItems/${item3.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-')}.png" class="small-img" alt="${item3}"><span class="tooltiptext">${item3}</span></div>`
 
     // Set up card
     document.getElementById('pokemon-card').classList.add('active-card')
