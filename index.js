@@ -664,6 +664,14 @@ const fullPokemonList = {
         'move1': ['Metal Claw', 'Sacred Sword'],
         'move2': ['Agility', 'Play Rough']
     },
+    'Zapdos': {
+        'role': 'Attacker',
+        'difficulty': 'Novice',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Thunderbolt'],
+        'move2': ['Zap Cannon']
+    },
     'Zeraora': {
         'role': 'Speedster',
         'difficulty': 'Intermediate',
