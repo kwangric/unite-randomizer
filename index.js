@@ -400,6 +400,14 @@ const fullPokemonList = {
         'move1': ['Fire Punch'],
         'move2': ['Flare Blitz']
     },
+    'Mega Charizard Y': {
+        'role': 'All-Rounder',
+        'difficulty': 'Novice',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Flamethrower'],
+        'move2': ['Fire Blast']
+    },
     'Mega Gyarados': {
         'role': 'All-Rounder',
         'difficulty': 'Intermediate',
@@ -479,6 +487,14 @@ const fullPokemonList = {
         'attackType': 'Special',
         'move1': ['Charge Beam', 'Electro Drift'],
         'move2': ['Thunder', 'Parabolic Charge']
+    },
+    'Moltres': {
+        'role': 'All-Rounder',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Special',
+        'move1': ['Sky Attack'],
+        'move2': ['Heat Wave']
     },
     'Mr. Mime': {
         'role': 'Supporter',
