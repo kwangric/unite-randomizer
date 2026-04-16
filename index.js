@@ -48,6 +48,14 @@ const fullPokemonList = {
         'move1': ['Fire Spin', 'Armor Cannon'],
         'move2': ['Flame Charge', 'Psyshock']
     },
+    'Articuno': {
+        'role': 'Defender',
+        'difficulty': 'Novice',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Blizzard'],
+        'move2': ['Ice Beam']
+    },
     'Azumarill': {
         'role': 'All-Rounder',
         'difficulty': 'Novice',
