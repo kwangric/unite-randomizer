@@ -642,6 +642,14 @@ const fullPokemonList = {
         'move1': ['Triple Axel', 'Stomp'],
         'move2': ['Trop Kick', 'Grassy Glide']
     },
+    'Typhlosion': {
+        'role': 'Attacker',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Eruption'],
+        'move2': ['Flame Wheel']
+    },
     'Tyranitar': {
         'role': 'All-Rounder',
         'difficulty': 'Intermediate',
