@@ -258,6 +258,14 @@ const fullPokemonList = {
         'move1': ['Megahorn', 'Iron Head'],
         'move2': ['No Retreat', 'Beat Up']
     },
+    'Feraligatr': {
+        'role': 'All-Rounder',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Crunch'],
+        'move2': ['Waterfall']
+    },
     'Galarian Rapidash': {
         'role': 'Speedster',
         'difficulty': 'Intermediate',
@@ -458,6 +466,14 @@ const fullPokemonList = {
         'move1': ['Future Sight', 'Psystrike'],
         'move2': ['Recover', 'Teleport']
     },
+    'Meganium': {
+        'role': 'Supporter',
+        'difficulty': 'Novice',
+        'attackStyle': 'Melee',
+        'attackType': 'Special',
+        'move1': ['Grass Knot'],
+        'move2': ['Petal Blizzard']
+    },
     'Meowscarada': {
         'role': 'Speedster',
         'difficulty': 'Intermediate',
@@ -577,6 +593,14 @@ const fullPokemonList = {
         'attackType': 'Physical',
         'move1': ['Fury Cutter', 'Leaf Blade'],
         'move2': ['Brutal Swing', 'Detect']
+    },
+    'Skeledirge': {
+        'role': 'Attacker',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Hyper Voice'],
+        'move2': ['Snarl']
     },
     'Slowbro': {
         'role': 'Defender',
