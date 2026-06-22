@@ -562,6 +562,14 @@ const fullPokemonList = {
         'move1': ['Surf', 'Bubble Beam'],
         'move2': ['Disable', 'Psychic']
     },
+    'Quaquaval': {
+        'role': 'All-Rounder',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Low Sweep'],
+        'move2': ['Liquidation']
+    },
     'Sableye': {
         'role': 'Supporter',
         'difficulty': 'Intermediate',
