@@ -730,6 +730,14 @@ const fullPokemonList = {
         'move1': ['Double Slap', 'Dazzling Gleam'],
         'move2': ['Rollout', 'Sing']
     },
+    'Yveltal': {
+        'role': 'Attacker',
+        'difficulty': 'Novice',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Oblivion Wing'],
+        'move2': ['Dark Pulse']
+    },
     'Zacian': {
         'role': 'All-Rounder',
         'difficulty': 'Intermediate',
@@ -797,7 +805,7 @@ const heldItemList = [
     'Slick Spoon',
     'Sp. Atk Specs',
     'Tenacity Belt',
-    'Vanguard Belt',
+    'Vanguard Bell',
     'Weakness Policy',
     'Wise Glasses'
 ]
