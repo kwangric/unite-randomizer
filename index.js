@@ -538,6 +538,14 @@ const fullPokemonList = {
         'move1': ['Confusion', 'Psychic'],
         'move2': ['Barrier', 'Power Swap']
     },
+    'Palkia': {
+        'role': 'All-Rounder',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Special',
+        'move1': ['Aqua Sphere'],
+        'move2': ['Dragon Claw']
+    },
     'Pikachu': {
         'role': 'Attacker',
         'difficulty': 'Novice',
