@@ -578,6 +578,14 @@ const fullPokemonList = {
         'move1': ['Low Sweep'],
         'move2': ['Liquidation']
     },
+    'Reshiram': {
+        'role': 'Attacker',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Blue Flare'],
+        'move2': ['Dragon Dance']
+    },
     'Sableye': {
         'role': 'Supporter',
         'difficulty': 'Intermediate',
