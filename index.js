@@ -642,6 +642,14 @@ const fullPokemonList = {
         'move1': ['Heavy Slam', 'Flail'],
         'move2': ['Block', 'Yawn']
     },
+    'Solgaleo': {
+        'role': 'All-Rounder',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Iron Head'],
+        'move2': ['Psyshock']
+    },
     'Suicune': {
         'role': 'All-Rounder',
         'difficulty': 'Intermediate',
