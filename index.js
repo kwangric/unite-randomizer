@@ -418,6 +418,14 @@ const fullPokemonList = {
         'move1': ['Icicle Crash', 'Ice Fang'],
         'move2': ['High Horsepower', 'Earthquake']
     },
+    'Morpeko': {
+        'role': 'Speedster',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Melee',
+        'attackType': 'Physical',
+        'move1': ['Spark'],
+        'move2': ['Assurance']
+    },
     'Mega Charizard X': {
         'role': 'All-Rounder',
         'difficulty': 'Novice',
@@ -681,6 +689,14 @@ const fullPokemonList = {
         'attackType': 'Physical',
         'move1': ['Gigaton Hammer', 'Smack Down'],
         'move2': ['Ice Hammer', 'Thief']
+    },
+    'Toxtricity': {
+        'role': 'Attacker',
+        'difficulty': 'Intermediate',
+        'attackStyle': 'Ranged',
+        'attackType': 'Special',
+        'move1': ['Shift Gear'],
+        'move2': ['Overdrive']
     },
     'Trevenant': {
         'role': 'Defender',
